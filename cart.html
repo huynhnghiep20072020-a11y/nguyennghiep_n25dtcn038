@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng - MiniShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <h1>MiniShop</h1>
         <nav class="main-nav">
             <a href="index.html">Trang chủ</a> | 
-            <a href="about.html">Giới thiệu</a> |
-            <a href="cart.html">Giỏ hàng</a> | 
+            <a href="about.html">Giới thiệu</a> | 
             <a href="contact.html">Liên hệ</a> | 
+            <a href="cart.html" class="active">Giỏ hàng (<span id="cart-count">0</span>)</a> | 
             <a href="login.html">Đăng nhập</a> | 
             <a href="register.html">Đăng ký</a>
         </nav>
     </header>
     <main>
         <h2>Giỏ hàng của bạn</h2>
-        <table class="cart-table" border="1">
+        <table class="cart-table">
             <thead>
                 <tr>
                     <th>Sản phẩm</th>
@@ -31,24 +33,28 @@
             <tbody>
                 <tr>
                     <td>Chuột không dây M1</td>
-                    <td>250.000 đ</td>
-                    <td><input type="number" min="1" value="1"></td>
-                    <td>250.000 đ</td>
+                    <td class="unit-price">250.000 đ</td>
+                    <td><input type="number" min="1" value="1" data-index="0" class="cart-qty-input"></td>
+                    <td class="item-subtotal">250.000 đ</td>
                 </tr>
                 <tr>
                     <td>Bàn phím cơ K2</td>
-                    <td>790.000 đ</td>
-                    <td><input type="number" min="1" value="1"></td>
-                    <td>790.000 đ</td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="text-align: right;"><strong>Tổng tiền:</strong></td>
-                    <td><strong>1.040.000 đ</strong></td>
+                    <td class="unit-price">790.000 đ</td>
+                    <td><input type="number" min="1" value="1" data-index="1" class="cart-qty-input"></td>
+                    <td class="item-subtotal">790.000 đ</td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right;"><strong>Tổng tiền:</strong></td>
+                    <td id="cart-grand-total"><strong>1.040.000 đ</strong></td>
+                </tr>
+            </tfoot>
         </table>
-        <br>
-        <button type="button">Đặt hàng</button>
+        <div class="cart-actions">
+            <button type="button" id="clear-cart">Xóa giỏ hàng</button>
+            <button type="button" id="checkout-btn">Đặt hàng</button>
+        </div>
     </main>
     <footer class="site-footer">
         <p>&copy; 2026 MiniShop. Dự án thực hành lập trình web.</p>

@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên hệ - MiniShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <h1>MiniShop</h1>
         <nav class="main-nav">
             <a href="index.html">Trang chủ</a> | 
-            <a href="about.html">Giới thiệu</a> |
-            <a href="cart.html">Giỏ hàng</a> | 
-            <a href="contact.html">Liên hệ</a> | 
+            <a href="about.html">Giới thiệu</a> | 
+            <a href="contact.html" class="active">Liên hệ</a> | 
+            <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a> | 
             <a href="login.html">Đăng nhập</a> | 
             <a href="register.html">Đăng ký</a>
         </nav>
@@ -34,7 +36,7 @@
             </p>
             <p>
                 <label for="contact-message">Nội dung</label><br>
-                <textarea id="contact-message" name="message" rows="5" cols="40" required></textarea>
+                <textarea id="contact-message" name="message" rows="5" cols="40" required placeholder="Nhập ít nhất 10 ký tự..."></textarea>
             </p>
             <p>
                 <button type="submit">Gửi liên hệ</button>

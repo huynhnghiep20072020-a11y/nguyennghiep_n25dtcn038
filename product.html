@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuột không dây M1 - MiniShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <h1>MiniShop</h1>
         <nav class="main-nav">
             <a href="index.html">Trang chủ</a> | 
-            <a href="about.html">Giới thiệu</a> |
-            <a href="cart.html">Giỏ hàng</a> | 
+            <a href="about.html">Giới thiệu</a> | 
             <a href="contact.html">Liên hệ</a> | 
+            <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a> | 
             <a href="login.html">Đăng nhập</a> | 
             <a href="register.html">Đăng ký</a>
         </nav>
@@ -20,14 +22,17 @@
     <main>
         <article class="product-detail">
             <h2>Chuột không dây M1</h2>
-            <img src="images/Chuột không dây M1.png" alt="Chuột không dây M1" width="400">
+            <img src="images/Chu%E1%BB%99t%20kh%C3%B4ng%20d%C3%A2y%20M1.png" alt="Chuột không dây M1" width="400" height="280">
             <p class="price">Giá: <strong>250.000 đ</strong></p>
             <p>
                 Chuột không dây kết nối 2.4GHz, thiết kế đối xứng, nút bấm êm, 
                 phù hợp cho học tập và làm việc văn phòng.
             </p>
+            <p style="margin: 15px 0;">
+                <button type="button" id="add-to-cart-btn" data-name="Chuột không dây M1" data-price="250000">Thêm vào giỏ hàng</button>
+            </p>
             <h3>Thông số kỹ thuật</h3>
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>Thông số</th>
